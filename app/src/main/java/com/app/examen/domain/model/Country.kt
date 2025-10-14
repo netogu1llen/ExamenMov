@@ -10,6 +10,5 @@ data class Country(
     val currencies: List<String>,
     val flag: String,
     val coatOfArms: String?,
-    val maps: String,
     val timezones: List<String>,
 )

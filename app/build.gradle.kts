@@ -71,4 +71,7 @@ dependencies {
 
     // Coil
     implementation(libs.coil.compose)
+
+    // OkHttp Logging Interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

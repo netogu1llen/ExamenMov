@@ -14,6 +14,5 @@ fun CountryDto.toDomain(): Country =
         currencies = currencies?.values?.map { "${it.name} (${it.symbol ?: ""})" } ?: emptyList(),
         flag = flags.png,
         coatOfArms = coatOfArms?.png,
-        maps = maps.googleMaps,
         timezones = timezones,
     )

@@ -12,7 +12,6 @@ data class CountryDto(
     @SerializedName("currencies") val currencies: Map<String, CurrencyDto>?,
     @SerializedName("flags") val flags: FlagsDto,
     @SerializedName("coatOfArms") val coatOfArms: CoatOfArmsDto?,
-    @SerializedName("maps") val maps: MapsDto,
     @SerializedName("timezones") val timezones: List<String>,
 ) {
     data class NameDto(
@@ -33,10 +32,5 @@ data class CountryDto(
     data class CoatOfArmsDto(
         @SerializedName("png") val png: String?,
         @SerializedName("svg") val svg: String?,
-    )
-
-    data class MapsDto(
-        @SerializedName("googleMaps") val googleMaps: String,
-        @SerializedName("openStreetMaps") val openStreetMaps: String,
     )
 }

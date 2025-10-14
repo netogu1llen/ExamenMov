@@ -24,13 +24,19 @@ class CountryRepositoryImpl
             }
 
             return try {
-                val response = api.getAllCountries()
-                val countries = response.map { it.toDomain() }
+                // Obtener países de todas las regiones
+                val allCountries = mutableListOf<Country>()
+
+                allCountries.addAll(api.getAmericasCountries().map { it.toDomain() })
+                allCountries.addAll(api.getEuropeCountries().map { it.toDomain() })
+                allCountries.addAll(api.getAfricaCountries().map { it.toDomain() })
+                allCountries.addAll(api.getAsiaCountries().map { it.toDomain() })
+                allCountries.addAll(api.getOceaniaCountries().map { it.toDomain() })
 
                 // Guardar en caché
-                preferences.saveCountryList(countries)
+                preferences.saveCountryList(allCountries)
 
-                countries
+                allCountries
             } catch (e: Exception) {
                 // Si hay error, usar caché aunque haya expirado
                 preferences.getCountryCache()?.countryList ?: throw e

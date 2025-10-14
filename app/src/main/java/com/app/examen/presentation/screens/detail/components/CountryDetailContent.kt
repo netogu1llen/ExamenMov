@@ -127,17 +127,5 @@ fun CountryDetailContent(country: Country) {
                 }
             }
         }
-
-        item {
-            Spacer(modifier = Modifier.height(24.dp))
-            Button(
-                onClick = { /* Abrir mapa */ },
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Icon(Icons.Default.Place, contentDescription = null)
-                Spacer(modifier = Modifier.width(8.dp))
-                Text("View on Map")
-            }
-        }
     }
 }
