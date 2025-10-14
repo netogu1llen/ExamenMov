@@ -1,9 +1,9 @@
 # Examen Argumentativo Práctico de Desarrollo Móvil
 
-Repositorio del exámen de móviles de la materia tc2007b
-Desarrollado por: Ernesto Guillén Guerrero 
-Matrícula: A01704967
-Plataforma: Android
+- Repositorio del exámen de móviles de la materia tc2007b
+- Desarrollado por: Ernesto Guillén Guerrero 
+- Matrícula: A01704967
+- Plataforma: Android
 
 ## Descripción
 Esta aplicación permite explorar información detallada sobre países:
